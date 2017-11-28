@@ -2,42 +2,34 @@
 # what other packages/libraries/resources we will use in
 # our script
 
-
 # We'll use this library to convert dates and times as needed.
-
 from datetime import datetime
 
 # We'll use the 'pretty print' package to make that which we
 # print out, more readable. We are also 'renaming' the function
 # we are importing from the package so we have less to type
 # when we want to use the function.
-
 from pprint import pprint as ppr
 
-
 # the requests package is what retrieves the webpage we want to scrape
-
 import requests
 
 # LXML is a 'core' package. Many people will use a package called
 # Beautiful Soup to scrape websites. LXML is what runs under the hood.
 # Once you can read HTML (not difficult) and know how to 'inspect'
 # websites, you'll be able to scrape anything (more on this later).
-
-
+# We are importing a function called 'html' from the lxml package.
 from lxml import html
 
 
-# Here we use a 'function' we gained acces to by importing the 
+# Here we use a 'function' we gained access to by importing the 
 # requests package; the 'get' function. We use this to get
 # our website by inputing the URL as a string.
-
 root = requests.get('https://stpaul.legistar.com/Calendar.aspx')
 
 # Now that we have the webpage, there are quite a few components
 # to what we actually recieved, we need to separate out the portion
 # we will use for scraping. 
-
 base = html.fromstring(root.text)
 
 # Enter LXML
@@ -71,13 +63,14 @@ base = html.fromstring(root.text)
 # After XPath has found that item, we want it to find the 'tbody' tag
 # within our 'MasterTable' tag. And once we've got that 'tbody' item
 # we want to grab every single row in that table.
-
 items = base.xpath('.//*[@class="rgMasterTable"]/tbody/tr')
 
 # We got our items, now lets get the data!
 # We are going to use a for-loop to go through each of our items
 # and parse them further using XPath. 
 
+# See if you can decifer what is happening here. Is you use Chrome,
+# visit the page we're scraping and 'inspect' it.
 for i in items[:5]:
     d = {}
     title = i.xpath('.//td[1]/*/a/font/text()')
