@@ -4,11 +4,13 @@ This repository uses LXML to scrape webpages. [Beautiful Soup](https://www.crumm
 
 That said, we're going to start with the basics, and add info as requested by users.
 
-### Python Basics
+## Python Variable Types
 
-##### A quick note about numbers
+#### A quick note about numbers
 
 In programming there are two basic types of numbers, integers and floats. Integers are whole numbers, positive or negative (i.e. 4, 231, -34). Floats are numbers that utilize decimal places (i.e. 3.76, .12, 32.00). 
+
+### Back to Basics
 
 A string is a variable that contains only text
 
