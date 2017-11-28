@@ -14,23 +14,23 @@ In programming there are two basic types of numbers, integers and floats. Intege
 
 A string is a variable that contains only text
 
-'''
+```
 test = 'This is a test variable that we are declaring and defining at the same time'
-'''
+```
 
 A list is a collection of variables. Lists can contain strings, numbers, other lists, and dictionaries.
 
-'''
+```
 new_list = ['red', 'blue', 12, .3.45,['dog', 'cat', 'taco'], {color: 'red', animal: 'bird', travel_method: 'flight'}]
-'''
+```
 
 A dictionary is a collection of key/value items. The last item in our previous list, is a dictionary. There are 3 keys, *color*, *animal*, and *travel_method*. The ':' is used to separate the key, from the value. It is important to note, that this is what a dictionary *may* look like when it is printed out. When creating dictionaries, the format *will* look different.
 
 Just like lists, dictionary values can be strings, numbers, lists, or other dictionaries.
 
-'''
+```
 new_dictionary =  {color: 'blue', animal: 'fish', travel_method: 'swim'}
-'''
+```
 
 
 
