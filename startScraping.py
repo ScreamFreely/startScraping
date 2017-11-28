@@ -43,23 +43,27 @@ base = html.fromstring(root.text)
 
 # Let's go through each part of the code.
 
-# items variable we are declaring and assigning so we can use it later.
+# 'items' variable we are declaring and assigning so we can use it later.
 
-# base is defined earlier, and is the product of html function we
+# 'base' is defined earlier, and is the product of html function we
 # pulled in from the LXML package. It returns an object that has
 # properties we can use.
 
-# xpath is one of those properties we are able to use. Within the
-# parenthesis we define the path to the object we want to scrape.
+# 'xpath' is one of those properties that is provided by the base. 
+# Within the parenthesis we define the path to the object we want to scrape.
 # We are going to input a string, using single quotations on the
 # outside for every XPath call, FYI.
+
 # We use a '.' to tell XPath that we want to only look within
 # the object being called; it sounds redundant perhaps, but is 
 # necessary. 
+
 # The '//' let's XPath  know that we are about to start telling it
 # what types of HTML tags we want to access.
+
 # The '*' is commonly used character that means 'anything'; what we're
 # saying here is we want any HTML tag that has a class of 'rgMasterTable'.
+
 # After XPath has found that item, we want it to find the 'tbody' tag
 # within our 'MasterTable' tag. And once we've got that 'tbody' item
 # we want to grab every single row in that table.
